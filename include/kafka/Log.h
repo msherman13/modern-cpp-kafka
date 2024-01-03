@@ -43,7 +43,7 @@ template <std::size_t MAX_CAPACITY>
 class LogBuffer
 {
 public:
-    LogBuffer():_wptr(_buf.data()) { _buf[0] = 0; } // NOLINT
+    LogBuffer():_buf(), _wptr(_buf.data()) { _buf[0] = 0; } // NOLINT
 
     LogBuffer& clear()
     {
